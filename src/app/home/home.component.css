@@ -1,0 +1,198 @@
+
+*{
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+
+.section-meals{
+    background-color:white;
+    
+   
+    
+    }
+    .meals-showcase{
+        list-style: none;
+        width:100%;
+        left:25%;
+        
+        /* background-color: #000; */
+    }
+    
+    .meals-showcase div{
+        display:block;
+        float:left;
+        width:18%;
+        
+        overflow: hidden;
+    }
+    
+    .meal-photo{
+        width:100%;
+        margin:0;
+        left:10%;
+        overflow:hidden;
+        background-color: #000;
+        color:white;
+    }
+    .meal-photo img{
+    width:90%;
+    height:auto;
+    transform:scale(1);
+    
+    opacity:0.4;
+    }
+    .clearfix {zoom:1}
+.clearfix:after{
+    content:'';
+    clear:both;
+    display:block;
+    height:0;
+    visibility:hidden;
+}
+    
+    .meal-photo img:hover{
+        transform:scale(1.4);
+        transition:transform 0.5s , opacity 0.5s;
+        opacity:1;
+    }
+
+    .footer{
+        position:relative;
+        margin-top: 20px;
+    }
+    
+
+
+    .flex-for-filter{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        
+        
+    }
+    .anchor{
+        
+        margin: 10px;
+        padding:10px;
+
+    }
+
+
+
+    .test
+    {
+        background-color: greenyellow;
+        border-radius: 2px;
+        padding:5px 20px;
+        font-size: 20px;
+        
+    }
+
+
+    a:hover{
+        background-color:green
+    }
+
+    .launch-year{
+        text-align: center;
+        padding:20px;
+    }
+
+
+    .heading{
+
+        font-weight: 50px;
+
+    }
+   
+
+
+      .active{
+          background-color:blue;
+      }
+
+      .active1{
+        background-color:yellow;
+    }
+
+    .abc2 {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        background-color:white;
+        margin-left: 20px ;
+      }
+
+      .column2 {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 4px;
+      }
+
+.outer{
+    background-color:white;
+}
+.superouter{
+    background-color:lightgrey;
+}
+
+      @media (max-width: 400px) {
+        .flex-for-filter {
+          flex: 100%;
+          max-width: 50%;
+        }
+      }
+      
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+        .flex-for-filter {
+          flex: 100%;
+          max-width: 70%;
+        }
+      }
+      
+    .abc {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      .a{
+       
+            flex: 10%;
+            max-width: 25%;
+            padding: 0 4px;
+          
+          
+      }
+      /* Create four equal columns that sits next to each other */
+      .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+      
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+      
+
+

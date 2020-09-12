@@ -1,0 +1,155 @@
+<!-- Show Loading symbol if there are no pokemon or all 151 haven't loaded-->
+<div class="container-fluid1">
+<div class="row">
+    <div>
+        <p>SpaceX Launch Programme</p>
+    </div>
+
+    <!-- <div class="col-md-12"> -->
+    <div class="col-md-3 abc2">
+        <div class="column2">
+        <div class="filter-by-year">
+        <div class="heading">
+        Filter
+        </div>
+        <div class="launch-year">
+            <p> launch Year </p>
+            <hr>
+        </div>
+            
+        <div class="flex-for-filter">
+            <div *ngFor="let launchYear of launchYear">
+
+                <div class="anchor">
+                <button (click) ="filterByYear(launchYear)" name="{{launchYear}}" class="test"  href="#">{{launchYear}}</button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div>
+
+    <div class="launch-year">
+        <p> Successful launch </p>
+        <hr>
+    </div>
+
+    <div class="flex-for-filter">
+        <div *ngFor="let launchYear of launchStatus">
+
+            <div class="anchor">
+            <button #launchStatus name="launchStatus" name="{{launchYear}}" (click) ="filterByLaunchStatus(launchYear)"class="test" href="#">{{launchYear}}</button>
+            <!-- <a class="test" href="#">{{launchYear}}</a> -->
+        </div>
+    </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="filter-by-launchStatus">
+
+    <div class="launch-year">
+        <p> Successful Landing </p>
+        <hr>
+    </div>
+
+    <div class="flex-for-filter">
+        <div *ngFor="let launchStatus of launchStatus">
+
+            <div class="anchor">
+            <button (click) ="filterByLandStatus(launchStatus)" class="test" href="#">{{launchStatus}}</button>
+            <!-- <a class="test" href="#">{{launchYear}}</a> -->
+        </div>
+    </div>
+
+
+    </div>
+
+</div>
+    </div>
+
+</div>
+    
+
+
+
+<div class="abc"> 
+    <div class="column" *ngFor="let pokemon of pokemons">
+        <div class="superouter">
+        <div class="outer">
+        <img style="width:90%; background-color:lightgrey" src="{{pokemon.links.mission_patch}}" alt="photo of {{ pokemon.name }}">
+      
+      <div ><span> Mission IDs :</span>{{ pokemon.mission_id }}</div>
+      <div><span> Launch Year :</span>{{ pokemon.launch_year | titlecase }}</div>
+                <div><span> Successful Launch:</span>{{ pokemon.launch_success }}</div>
+                <div><span>SuccessFul Landing:</span> {{pokemon.rocket.first_stage.cores[0].land_success}};
+                
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="col-xs-8">
+        <div class="section-meals">
+        
+ 
+
+    
+  
+        <ul class="flex-box">
+            
+                
+            <div class="column" *ngFor="let pokemon of pokemons">
+        <a style="cursor:pointer; text-decoration:none" routerLinkActive="active" [routerLink]="['/details', pokemon.id]">
+            <li class="meal-photo" style="margin:5px 1px 1px 5px; width:95%">
+                <p>{{ pokemon.launch_year | titlecase }}</p>
+                <div >{{ pokemon.launch_success }}</div>
+                <div >{{ pokemon.mission_id }}</div>
+                
+                  <img style="display:block;;width:100%" src="{{pokemon.links.mission_patch}}" alt="photo of {{ pokemon.name }}">
+                
+                
+
+            </li>
+            </a>
+            
+        </div>
+    
+</ul>
+</div>
+</div> -->
+<!-- <div class="form-group" class="footer">
+    <div class="col-xs-2" style="margin-bottom: 20px;">
+    <button type="button" class="btn btn-primary pre" vallue="pre" style="float: right"[disabled]="!state.preBtn" (click)="getPokemons(state.preUrl)" #pre>Previous</button>
+    </div>
+    <div class="col-xs-2" style="float: right">
+    <button type="button" class="btn btn-danger next" value="next" style="width:90px; height:auto;" (click)="getPokemons(state.nextUrl)" #next
+    [disabled]="state.nextBtn"
+    >Next</button>
+    </div>
+  </div> -->
+<!-- </div>  -->
+</div>
+</div>
